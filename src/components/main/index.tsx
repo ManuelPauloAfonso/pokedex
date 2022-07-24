@@ -41,14 +41,14 @@ export default function Main(){
         <Container>
             <Search />
             <div className="container-pokemon">
-                <div>
+                <div className="pokeList">
                     {
                     listPokemons?.results.map(
                         (pokemon: PokemonType, index: number) =>  (
-                            <>
-                                <p key={index}>{ pokemon.name }</p>
+                            <div className="pokemon">
                                 <img className="img" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index +1}.svg`}/>
-                            </>
+                                <p key={index}>{ pokemon.name }</p>
+                            </div>
                             
                         )
                     )  
